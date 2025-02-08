@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--<bean name="cus" class="com.tg.first.firstproject.Customer">-->
+<!--		<property name="name">
+			<value>Santosh</value>
+		</property>
+		<property name="contact">
+			<value>1234</value>
+		</property>
+		<property name="address">
+			<value>Visakhapatnam</value>
+		</property>
+	</bean>-->
+<!--<property name="name" value="Suresh" />
+<property name="contact" value="6789" />
+<property name="address" value="Hyd" />
+</bean>-->
+
+<bean name="cus" class="com.tg.first.firstproject.Customer" p:name="Rajesh" p:contact="5455" p:address="Bangalore" />
+
+</beans>
