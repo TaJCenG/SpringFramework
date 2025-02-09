@@ -1,26 +1,31 @@
 package com.tg.first.firstproject;
 
+import java.util.Properties;
+
 public class Customer {
 
 	private String Name;
-	private String address;
+//	private List<String> address;//same goes for set
 	private String contact;
-	public String getName() {
-		return Name;
+//	private Map<String, String> address;
+	private Properties address;
+	public Customer(String name, int contact, String address) {
+		System.out.println(address);
+		System.out.println(contact);
+		System.out.println(name);
 	}
-	public void setName(String name) {
+	public Customer(String name, String contact, Properties address) {
+		super();
 		Name = name;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
+		this.contact = contact;
 		this.address = address;
 	}
-	public String getContact() {
-		return contact;
+	@Override
+	public String toString() {
+		return "Customer [Name=" + Name + ", contact=" + contact + ", address=" + address + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
+
+
+
 }

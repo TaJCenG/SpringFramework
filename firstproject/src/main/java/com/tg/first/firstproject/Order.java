@@ -4,32 +4,23 @@ import java.util.Date;
 
 public class Order {
 
-	private String Id;
-	private Date date;
+	private String productId;
 	private String productName;
 	private Customer customer;
-	public String getId() {
-		return Id;
-	}
-	public void setId(String id) {
-		Id = id;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public String getProductName() {
-		return productName;
-	}
-	public void setProductName(String productName) {
+	public Order(String productId, String productName, Customer customer) {
+		super();
+		this.productId = productId;
 		this.productName = productName;
-	}
-	public Customer getCustomer() {
-		return customer;
-	}
-	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+	@Override
+	public String toString() {
+		return "Order [productId=" + productId + ", productName=" + productName + ", customer=" + customer
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+
+
+
+
 }

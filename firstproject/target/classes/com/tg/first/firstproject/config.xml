@@ -8,22 +8,93 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!--<bean name="cus" class="com.tg.first.firstproject.Customer">-->
+	<bean name="cus" class="com.tg.first.firstproject.Customer">
+		
+		<constructor-arg value="Santosh" type="java.lang.String"/>
+		<constructor-arg value="address" type="java.lang.String"/>
+<constructor-arg>
+    <props>
+        <prop key="City">Visakhapatnam</prop>
+        <prop key="Channel">Tajcheng</prop>
+    </props>
+</constructor-arg>
+
+
+</bean>
+
+<bean name="ord" class="com.tg.first.firstproject.Order">
+    <constructor-arg value="p123" type="java.lang.String" index="0"/>
+    <constructor-arg value="Java Course" type="java.lang.String" index="1"/>
+    <constructor-arg ref="cus" index="2"/>
+
+<!--		
+		<constructor-arg>
+    <value>Sam</value>
+</constructor-arg>
+
+<constructor-arg>
+    <value>9999999</value>
+</constructor-arg>
+
+<constructor-arg>
+    <props>
+        <prop key="City">Visakhapatnam</prop>
+        <prop key="Channel">Tajcheng</prop>
+    </props>
+</constructor-arg>-->
+
 <!--		<property name="name">
 			<value>Santosh</value>
 		</property>
 		<property name="contact">
 			<value>1234</value>
+		</property>-->
+<!--		<property name="address">
+			<list>
+				<value>Madhurawada-Visakhapatnam</value>
+				<value>Ameerpet-Hyderabad</value>
+				<value>Chennai</value>
+			</list>
 		</property>
-		<property name="address">
-			<value>Visakhapatnam</value>
-		</property>
-	</bean>-->
+-->
+<!--<property name="address">
+    <map>
+        <entry key="Home" value="Madhurawada-Visakhapatnam"/>
+        <entry key="Office1" value="Ameerpet - Hyderabad"/>
+        <entry key="Office2" value="Kolkata"/>
+    </map>
+</property>
+-->
+
+<!--<property name="address">
+    <props>
+        <prop key="Home">Visakhapatnam</prop>
+        <prop key="Office1">Hyderabad</prop>
+        <prop key="Office2">Kolkata</prop>
+    </props>
+</property>
+-->
+	</bean>
 <!--<property name="name" value="Suresh" />
 <property name="contact" value="6789" />
 <property name="address" value="Hyd" />
 </bean>-->
 
-<bean name="cus" class="com.tg.first.firstproject.Customer" p:name="Rajesh" p:contact="5455" p:address="Bangalore" />
+<!--<bean name="cus" class="com.tg.first.firstproject.Customer" p:name="Rajesh" p:contact="5455" p:address="Bangalore" />
+-->
 
+<!--<bean name="ord" class="com.tg.first.firstproject.Order">
+    <property name="productId">
+        <value>p123</value>
+    </property>
+    
+    <property name="productName">
+        <value>Apple Macbook</value>
+    </property>
+    
+    <property name="customer">
+        <ref bean="cus"/>
+    </property>
+</bean>
+-->
 </beans>
